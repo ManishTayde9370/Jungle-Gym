@@ -1,0 +1,28 @@
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+.slideshow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

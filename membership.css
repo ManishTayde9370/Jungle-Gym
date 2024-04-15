@@ -1,0 +1,154 @@
+.price {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .price .heading {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .price .heading span {
+    color: #ff6b6b;
+  }
+  
+  /* Box container styles */
+  .box-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Box styles */
+  .box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .box .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .box .amount {
+    font-size: 36px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+  }
+  
+  /* Unordered list styles */
+  .price .box-container .box ul {
+    gap: 15px;
+    list-style: none;
+  }
+  
+  /* List item styles */
+  .price .box-container .box ul li {
+    color: #555;
+    display: inline;
+  }
+  
+  /* Button styles */
+  .box .btn {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .box .btn:hover {
+    background-color: #ff5252;
+  }
+  
+  /* Button with different class */
+  .btn-pr {
+    background-color: #333;
+  }
+  
+  .btn-pr:hover {
+    background-color: #555;
+  }
+  
+  
+  /* review.css */
+
+.section-reviews {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .review-info {
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .review-icon {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Added */
+  }
+  
+  .review-icon:hover {
+    transform: scale(1.1); /* Added */
+  }
+  
+  .review-image {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s; /* Added */
+  }
+  
+  .review-image:hover {
+    transform: scale(1.1); /* Added */
+  }
+  
+  .review-image:hover:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 12px); /* Adjust size of the ring */
+    height: calc(100% + 12px); /* Adjust size of the ring */
+    top: -6px; /* Adjust position of the ring */
+    left: -6px; /* Adjust position of the ring */
+    border: 4px solid transparent; /* Increase thickness of the ring */
+    border-radius: 50%;
+    z-index: 1;
+    box-sizing: border-box;
+    animation: ringAnimation 1s infinite linear; /* Start the animation */
+  }
+  
+  @keyframes ringAnimation {
+    0% {
+      transform: rotate(0deg); /* Start from 0 degree */
+      border-color: transparent; /* Hide the ring */
+    }
+    100% {
+      transform: rotate(360deg); /* Rotate 360 degree */
+      border-color: red; /* Yellow ring */
+    }
+  }
+  

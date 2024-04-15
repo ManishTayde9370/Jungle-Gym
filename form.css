@@ -1,0 +1,24 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+}
+#joinUsForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+/* Hover effect */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+select:hover
+button:hover {
+    background-color: #0fdde4c5;
+}

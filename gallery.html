@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Gym</title>
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet"> 
+	<link href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"rel="stylesheet"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <nav class="header-nav" aria-label="navigation">
+            <div class="logo-content">
+              <img src="logo-removebg-preview.png" alt="Logo" class="nav-icon" width="90" height=80" />
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="timetable.html">TimeTable</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        <div class="gallery">
+            
+            <ul class="controls">
+                <li class="buttons active" data-filter="all">All</li>
+                <li class="buttons" data-filter="stretching">Stretching</li>
+                <li class="buttons" data-filter="strength">Strength</li>
+                <li class="buttons" data-filter="cardio">Cardio</li>
+                <li class="buttons" data-filter="dumbbell">Dumbbell</li>
+                <li class="buttons" data-filter="zumba">Zumba</li>
+            </ul>
+        
+            <div class="image-container">
+        
+                <a href="stretching1.jpeg" class="image stretching">
+                    <img src="stretching1.jpeg" alt="">
+                </a>
+                <a href="stretching2.jpeg" class="image stretching">
+                    <img src="stretching2.jpeg" alt="">
+                </a>
+                <a href="stretching3.jpeg" class="image stretching">
+                    <img src="stretching3.jpeg" alt="">
+                </a>
+                <a href="strength1.jpeg" class="image strength">
+                    <img src="strength1.jpeg" alt="">
+                </a>
+                <a href="strength2.jpeg" class="image strength">
+                    <img src="strength2.jpeg" alt="">
+                </a>
+                <a href="strength3.jpeg" class="image strength">
+                    <img src="strength3.jpeg" alt="">
+                </a>
+                <a href="cardio1.jpeg" class="image cardio">
+                    <img src="cardio1.jpeg" alt="">
+                </a>
+                <a href="cardio2.jpeg" class="image cardio">
+                    <img src="cardio2.jpeg" alt="">
+                </a>
+                <a href="cardio3.jpeg" class="image cardio">
+                    <img src="cardio3.jpeg" alt="">
+                </a>
+                <a href="cardio4.jpeg" class="image cardio">
+                    <img src="cardio4.jpeg" alt="">
+                </a>
+                <a href="dumbell1.jpeg" class="image dumbbell">
+                    <img src="dumbell1.jpeg" alt="">
+                </a>
+                <a href="dumbell2.jpeg" class="image dumbbell">
+                    <img src="dumbell2.jpeg" alt="">
+                </a>
+                <a href="dumbell3.jpeg" class="image dumbbell">
+                    <img src="dumbell3.jpeg" alt="">
+                </a>
+                <a href="zumba1.jpeg" class="image zumba">
+                    <img src="zumba1.jpeg" alt="">
+                </a>
+                <a href="zumba2.jpeg" class="image zumba">
+                    <img src="zumba2.jpeg" alt="">
+                </a>
+                <a href="zumba3.jpeg" class="image zumba">
+                    <img src="zumba3.jpeg" alt="">
+                </a>
+                <a href="zumba4.jpeg" class="image zumba">
+                    <img src="zumba4.jpeg" alt="">
+                </a>
+            </div>
+        </div>
+        </div>
+         
+      </header>
+ <!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('.buttons').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var filter = $(this).attr('data-filter')
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+    });
+ $('.gallery').magnificPopup({
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+    });
+});
+</script>
+</body>
+</html>
+
+
